@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Страницы - WOC</title><link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 28 28'%3E%3Cpath fill='%23B12F2F' d='M20.44 0h7.45L14 27.97.18.01h7.4l6.43 15.71L20.44.01Z'/%3E%3C/svg%3E"><style>:root {
+      --primary-color: 255, 255, 255;
+      --secondary-color: 177, 47, 47;
+      --hover-color: 40, 40, 34;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+    }
+
+    html {
+      block-size: 100%;
+      inline-size: 100%;
+    }
+
+    body {
+      block-size: 100%;
+      inline-size: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: rgb(var(--primary-color));
+      background-color: rgba(var(--primary-color), 0.1);
+    }
+
+    body>div {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      min-block-size: 100%;
+      padding: 15px;
+      overflow: hidden;
+      perspective: 1000px;
+    }
+
+    body>div>svg,
+    body>div img {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: contain;
+      filter: blur(15px);
+    }
+
+    body>div>div {
+      inline-size: 100%;
+      max-inline-size: fit-content;
+      margin: auto;
+      padding: 15px;
+      background-color: rgba(var(--secondary-color), 0.75);
+      box-shadow: 0 0 0 5px rgba(var(--secondary-color), 0.75);
+      border: 1px solid;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    svg,
+    img {
+      display: block;
+      max-inline-size: 100%;
+      block-size: auto;
+      margin-inline: auto;
+      filter: drop-shadow(0 0 3px rgba(var(--primary-color), 1));
+    }
+
+    h1 {
+      margin-block: 20px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      border-inline-start: 1px solid;
+      transition: border-color 0.3s;
+    }
+
+    ul:focus-within {
+      border-color: rgb(var(--hover-color));
+    }
+
+    ul ul {
+      margin-inline-start: 15px;
+    }
+
+    li:not(:last-child) {
+      margin-block-end: 10px;
+    }
+
+    li a {
+      display: block;
+      max-inline-size: fit-content;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      color: inherit;
+      transition: color 0.3s;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    li a:before {
+      content: "- ";
+    }
+
+    li a:focus-visible {
+      color: rgb(var(--hover-color));
+    }
+
+    li>div:not(:first-child) {
+      margin-block-start: 5px;
+    }
+
+    li>ul {
+      margin-block-start: 10px;
+    }
+
+    @media (any-hover: hover) {
+      ul:hover {
+        border-color: rgb(var(--hover-color));
+      }
+
+      li a:hover {
+        color: rgb(var(--hover-color));
+      }
+    }</style></head><body><svg style="display: none;"><symbol id="logo" viewBox="0 0 191 38" fill="#282828" stroke="none"><path d="M20.44 3h7.45L14 30.97.18 3.01h7.4l6.43 15.71 6.43-15.71Zm10.6 22.05c.23.32.53.57.88.72.4.16.82.25 1.25.24.63 0 1.25-.14 1.82-.42a3.4 3.4 0 0 0 1.35-1.25 3.7 3.7 0 0 0 .53-2.02l.6 2.25a4.35 4.35 0 0 1-.9 2.82 5.6 5.6 0 0 1-2.33 1.72 8.08 8.08 0 0 1-6.15-.03A5.07 5.07 0 0 1 25 24.2a4.83 4.83 0 0 1 1.77-3.93c1.17-.95 2.84-1.42 5-1.42.95-.01 1.9.09 2.84.3.75.16 1.47.41 2.16.74.5.24.96.56 1.35.95v2.52a6.63 6.63 0 0 0-2.09-1.04 8.62 8.62 0 0 0-2.5-.35c-.54-.02-1.1.05-1.61.22a1.7 1.7 0 0 0-1.2 1.73c-.01.4.1.8.33 1.12Zm-4.77-11.52c1.14-.54 2.32-.99 3.53-1.35a15.2 15.2 0 0 1 4.5-.64c1.39-.02 2.77.2 4.1.66a6.63 6.63 0 0 1 2.83 1.9 4.55 4.55 0 0 1 1.06 3.04v12.18h-5.42v-10.9c.01-.38-.06-.75-.2-1.1-.15-.32-.36-.6-.63-.82-.3-.23-.66-.4-1.03-.47-.47-.1-.94-.16-1.42-.15a11.32 11.32 0 0 0-5.41 1.47l-1.91-3.82Zm30.96 2.9a2.2 2.2 0 0 0-1.94-.83 3.2 3.2 0 0 0-1.58.38c-.45.25-.82.63-1.05 1.09-.27.53-.4 1.13-.38 1.73v10.52h-5.71V12.03h5.73v2.6a5.52 5.52 0 0 1 2.04-2.23 6.1 6.1 0 0 1 3.22-.78c2.15 0 3.72.57 4.7 1.73.97 1.15 1.46 2.77 1.47 4.84v11.13H57.8V18.8a4.09 4.09 0 0 0-.59-2.37ZM68.82 3.32a3.66 3.66 0 0 1 4.68 0 2.8 2.8 0 0 1 .95 2.2 2.84 2.84 0 0 1-.95 2.21 3.59 3.59 0 0 1-4.68 0 2.81 2.81 0 0 1-.98-2.22 2.77 2.77 0 0 1 .98-2.2Zm5.08 8.7v17.3h-5.5v-17.3l5.5-.01Zm14.2.01v4.7H76.54v-4.7H88.1Zm-3.08-6.01v23.3h-5.45V6.02h5.45Z"/><path d="M96.94 37.6h-5.72l4.22-9.65-7.48-15.92h6.23l5.6 13.87-2.93-.04 5.53-13.83h5.81L96.94 37.59Zm30.18-8.28h-6.69L124.7 1.7l11.2 16.05L147.12 1.7l4.27 27.63h-6.7L143.1 15.9l-7.23 10.98-7.18-10.98-1.58 13.42Zm32.48-4.27c.23.32.55.57.9.72.4.16.82.25 1.25.24.62 0 1.24-.13 1.8-.41.56-.28 1.03-.7 1.35-1.24a3.7 3.7 0 0 0 .53-2.03l.6 2.26c.03 1-.29 2-.9 2.8a5.6 5.6 0 0 1-2.33 1.72 8.1 8.1 0 0 1-6.15-.03 5.05 5.05 0 0 1-3.1-4.87 4.82 4.82 0 0 1 1.77-3.93c1.18-.95 2.84-1.42 5-1.42a12.06 12.06 0 0 1 5 1.04c.5.24.96.56 1.35.95v2.52a6.63 6.63 0 0 0-2.08-1.06 8.61 8.61 0 0 0-2.5-.35c-.55-.03-1.1.05-1.62.22-.36.12-.67.35-.9.66-.2.31-.31.69-.3 1.07-.01.4.1.8.33 1.14Zm-4.77-11.52a25.2 25.2 0 0 1 3.53-1.35c1.46-.44 2.98-.65 4.51-.64 1.4-.02 2.77.2 4.09.66a6.63 6.63 0 0 1 2.84 1.9 4.56 4.56 0 0 1 1.05 3.04v12.18h-5.45v-10.9c.01-.37-.06-.75-.2-1.1a2.14 2.14 0 0 0-1.65-1.3c-.46-.1-.94-.15-1.42-.14a11.36 11.36 0 0 0-5.38 1.45l-1.92-3.8ZM180.84 0v29.32h-5.71V0h5.71ZM191 0v29.32h-5.72V0h5.71Z"/></symbol></svg><div><svg width="191" height="38" aria-hidden="true"><use xlink:href="#logo"></use></svg><div><svg width="191" height="38" aria-hidden="true"><use xlink:href="#logo"></use></svg><h1>Страницы</h1><ul><li><a href="index.html" target="_blank" title="Главная">Главная</a></li><li><a href="blog.html" target="_blank" title="Блог">Блог</a></li><li><a href="blog-page.html" target="_blank" title="Страница блога">Страница блога</a></li></ul></div></div></body></html>
