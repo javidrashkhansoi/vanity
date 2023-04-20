@@ -881,18 +881,18 @@ html.fslightbox-open body {
   transform: scale(0);
 }
 
-.page {
+html {
   scroll-behavior: smooth;
   scroll-padding-block-start: var(--header-wrapper-block-size);
 }
 
-.page__body {
+body.body {
   font-family: "Jost", sans-serif;
   color: #282828;
   font-size: 18px;
 }
 
-.page__body::after {
+body::after {
   content: "";
   position: fixed;
   inset: 0;
@@ -902,16 +902,16 @@ html.fslightbox-open body {
   transition-duration: 0.3s;
 }
 
-html:not(.burger-active) .page__body::after {
+html:not(.burger-active) body::after {
   opacity: 0;
   visibility: hidden;
 }
 
-.lock .page__body {
+.lock body {
   overflow: hidden;
 }
 
-.page__wrapper {
+.wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -919,7 +919,7 @@ html:not(.burger-active) .page__body::after {
   overflow: hidden;
 }
 
-.page__main {
+.main {
   flex: 1 1 auto;
 }
 
@@ -931,6 +931,12 @@ html:not(.burger-active) .page__body::after {
 
 .header {
   block-size: var(--header-wrapper-block-size);
+  line-height: 1;
+}
+
+.header ul {
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
 }
 
 .header__wrapper {
@@ -1113,6 +1119,7 @@ html:not(.burger-active) .page__body::after {
 }
 
 .header-form__label a {
+  color: #fff;
   text-decoration: underline;
   transition-property: color;
   transition-duration: 0.3s;
@@ -2498,7 +2505,7 @@ html:not(.burger-active) .page__body::after {
     margin-block-end: calc(20px + -20 * ((100vw - 375px) / 825));
   }
 
-  .page__body {
+  body.body {
     font-size: calc(16px + 2 * ((100vw - 375px) / 825));
   }
 
