@@ -11303,16 +11303,32 @@ class Dialog {
    * @param {HTMLDialogElement} dialog
    */
   #show(trigger, dialog) {
-    trigger.addEventListener("click", event => {
-      dialog.removeAttribute("open");
-      dialog.showModal();
+    // trigger.addEventListener("click", event => {
+    //   dialog.removeAttribute("open");
+    //   dialog.showModal();
 
-      if (!this.#activeDialogs.length) {
-        scrolling.lock();
-        Constants.ROOT.classList.add(this.#options.class);
+    //   if (!this.#activeDialogs.length) {
+    //     scrolling.lock();
+    //     Constants.ROOT.classList.add(this.#options.class);
+    //   }
+
+    //   this.#activeDialogs.push(dialog);
+    // });
+
+    document.addEventListener("click", event => {
+      const { target } = event;
+
+      if (target.closest("[data-dialog-target]:not(.product-button--added)")) {
+        dialog.removeAttribute("open");
+        dialog.showModal();
+
+        if (!this.#activeDialogs.length) {
+          scrolling.lock();
+          Constants.ROOT.classList.add(this.#options.class);
+        }
+
+        this.#activeDialogs.push(dialog);
       }
-
-      this.#activeDialogs.push(dialog);
     });
   }
 
@@ -11613,13 +11629,13 @@ searchButton?.addEventListener("click", () => {
   }
 });
 
-searchButton?.addEventListener("mouseenter", () => {
-  const searchForm = document.querySelector(".header-form--fixed");
-  const searchInput = searchForm?.querySelector("input");
+// searchButton?.addEventListener("mouseenter", () => {
+//   const searchForm = document.querySelector(".header-form--fixed");
+//   const searchInput = searchForm?.querySelector("input");
 
-  searchForm?.classList.add("show");
-  searchInput?.focus();
-});
+//   searchForm?.classList.add("show");
+//   searchInput?.focus();
+// });
 
 document.addEventListener("click", event => {
   const { target } = event;

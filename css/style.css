@@ -811,12 +811,32 @@ html.fslightbox-open body {
   max-inline-size: 255px;
 }
 
+.product-button__add-icon {
+  font-size: 0;
+}
+
+.product-button__add-icon svg {
+  stroke: #fff;
+}
+
+.product-button:not(.product-button--added) .product-button__add-icon {
+  display: none;
+}
+
+.product-button:not(.product-button--added) .product-button__add-text {
+  display: none;
+}
+
 .product-button__icon {
   font-size: 0;
 }
 
 .product-button__icon svg {
   fill: currentColor;
+}
+
+.product-button--added .product-button__text {
+  display: none;
 }
 
 .slider-pagination {
@@ -2202,6 +2222,10 @@ html:not(.burger-active) .page__body::after {
     -webkit-margin-after: 15px;
     margin-block-end: 15px;
   }
+
+  .product-button--added .product-button__icon {
+    display: none;
+  }
 }
 
 @media (min-width: 551px) {
@@ -2820,6 +2844,10 @@ html:not(.burger-active) .page__body::after {
 
   .product-button--white {
     flex: 1 1 auto;
+  }
+
+  .product-button__add-text {
+    font-size: 0;
   }
 
   .product-button--small .product-button__text {
